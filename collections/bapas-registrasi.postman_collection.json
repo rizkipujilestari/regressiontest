@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "a60bb023-78ec-429b-90e1-8c851009bf1e",
+		"name": "bapas-registrasi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20360563"
+	},
+	"item": [
+		{
+			"name": "daftar-calon-klien",
+			"item": [
+				{
+					"name": "daftar-calon-klien (main grid)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_SSO}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/daftar-calon-klien?page=1&per_page=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"daftar-calon-klien"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "jenis_tab_klien",
+									"value": "nol_mp",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "daftar-calon-klien/export-pdf",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_SSO}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/daftar-calon-klien/export-pdf",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"daftar-calon-klien",
+								"export-pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "daftar-calon-klien/export-excel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_SSO}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/daftar-calon-klien/export-excel",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"daftar-calon-klien",
+								"export-excel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "daftar-calon-klien (create)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_SSO}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"golongan\": \"BGD1\",\r\n    \"nama_lengkap\": \"Andika Rayza\",\r\n    \"nama_alias_1\": \"TEST DATA 020122 Nama Alias 1\",\r\n    \"nama_alias_2\": \"TEST DATA 020122 Nama Alias 2\",\r\n    \"nama_alias_3\": \"TEST DATA 020122 Nama Alias 3\",\r\n    \"nama_kecil_1\": \"TEST DATA 020122 Nama Kecil 1\",\r\n    \"nama_kecil_2\": \"TEST DATA 020122 Nama Kecil 2\",\r\n    \"nama_kecil_3\": \"TEST DATA 020122 Nama Kecil 3\",\r\n    \"is_menarik_perhatian_masyarakat\": \"1\",\r\n    \"is_pengaruh_terhadap_masyarakat\": \"1\",\r\n    \"tempat_asal\": \"TEST DATA 020122\",\r\n    \"tempat_lahir\": \"TEST DATA 020122\",\r\n    \"tanggal_lahir\": \"2000-01-01\",\r\n    \"id_jenis_kelamin\": \"L\",\r\n    \"kewarganegaraan\": \"WNI\",\r\n    \"id_negara\": \"62\",\r\n    \"id_jenis_agama\": \"ISM\",\r\n    \"id_jenis_suku\": \"BTA\",\r\n    \"id_status_perkawinan\": \"TKWN\",\r\n    \"kode_prov_tinggal\": \"1\",\r\n    \"kode_kabkota_tinggal\": \"425\",\r\n    \"alamat_tinggal\": \"TEST DATA 020122\",\r\n    \"kode_prov_lain\": \"\",\r\n    \"kode_kabkota_lain\": \"\",\r\n    \"alamat_lain\": \"TEST DATA 020122\",\r\n    \"kodepos\": \"\",\r\n    \"telepon\": \"000000000000\",\r\n    \"residivis\": \"RDV0\",\r\n    \"diputus_oleh\": \"TEST DATA 020122\",\r\n    \"perkara\": \"TEST DATA 020122\",\r\n    \"no_putusan\": \"TEST DATA 020122\",\r\n    \"tahun_lama_putusan\": \"1\",\r\n    \"bulan_lama_putusan\": \"1\",\r\n    \"hari_lama_putusan\": \"1\",\r\n    \"denda\": \"1\",\r\n    \"sisa_denda\": \"1\",\r\n    \"tahun_pidana_kurungan\": \"1\",\r\n    \"bulan_pidana_kurungan\": \"1\",\r\n    \"hari_pidana_kurungan\": \"1\",\r\n    \"uang_persediaan\": \"1\",\r\n    \"sisa_uang_persediaan\": \"1\",\r\n    \"restitusi\": \"1\",\r\n    \"sisa_restitusi\": \"1\",\r\n    \"tgl_penahanan\": \"2022-12-25\",\r\n    \"tgl_putusan\": \"2022-12-25\",\r\n    \"tgl_ekspirasi\": \"2022-12-25\",\r\n\t\"id_instansi_aph\": \"201507090003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/daftar-calon-klien",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"daftar-calon-klien"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "daftar-calon-klien/{id} (update)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_SSO}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_instansi_aph\"                   : \"201507090006\",\r\n    \"nama_lengkap\"                      : \"Pradikta Wicaksono\",\r\n    \"nama_alias_1\"                      : \"Dikta\",\r\n    \"nama_alias_2\"                      : \"Prana\",\r\n    \"nama_alias_3\"                      : \"\",\r\n    \"nama_kecil_1\"                      : \"\",\r\n    \"nama_kecil_2\"                      : \"\",\r\n    \"nama_kecil_3\"                      : \"\",\r\n    \"residivis\"                         : \"RDV0\", \r\n    \"is_menarik_perhatian_masyarakat\"   : \"0\",\r\n    \"is_pengaruh_terhadap_masyarakat\"   : \"0\",\r\n    \"tempat_asal\":\"Jakarta\",\r\n    \"tempat_lahir\"                      : \"Jakarta\",\r\n    \"tanggal_lahir\":\"1986-01-10\",\r\n    \"id_jenis_kelamin\"                  : \"L\",\r\n    \"kewarganegaraan\"                   : \"WNI\",\r\n    \"id_negara\"                         : \"62\",\r\n    \"id_jenis_agama\"                    : \"ISM\",\r\n    \"id_jenis_suku\"                     : \"SUN\",\r\n    \"id_status_perkawinan\"              : \"TKWN\",\r\n    \"kode_prov_tinggal\"                 : \"12\",\r\n    \"kode_kabkota_tinggal\"              : \"122\",\r\n    \"alamat_tinggal\"                    : \"Lengkong\",\r\n    \"kode_prov_lain\"                    : \"12\",\r\n    \"kode_kabkota_lain\"                 : \"119\",\r\n    \"alamat_lain\"                       : \"Cibinong\",\r\n    \"telepon\"                           : \"0261206009\",\r\n    \"no_hp\"                             : \"081322223333\",\r\n    \"kodepos\"                           : \"40225\",\r\n    \r\n    \"tgl_penahanan\"                     : \"2022-11-23\",\r\n    \"perkara\"                           : \"pencurian\",\r\n    \"diputus_oleh\"                      : \"Hakim Agung\",\r\n    \"tgl_putusan\"                       : \"2022-11-15\",\r\n    \"no_putusan\"                        : \"JHT-1234-XI-2022\",\r\n    \"tahun_lama_putusan\"                : \"0\",\r\n    \"bulan_lama_putusan\"                : \"2\",\r\n    \"hari_lama_putusan\"                 : \"0\",\r\n    \"denda\"                             : \"250000\",\r\n    \"sisa_denda\"                        : \"0\",\r\n    \"tahun_pidana_kurungan\"             : \"1\",\r\n    \"bulan_pidana_kurungan\"             : \"1\",\r\n    \"hari_pidana_kurungan\"              : \"1\",\r\n    \"up_uang_persediaan\"                : \"0\",\r\n    \"sisa_up_uang_persediaan\"           : \"0\",\r\n    \"restitusi\"                         : \"0\",\r\n    \"sisa_restitusi\"                    : \"0\",\r\n    \"tgl_ekspirasi\"                     : \"2023-08-08\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/daftar-calon-klien/70720230110001",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"daftar-calon-klien",
+								"70720230110001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "daftar-calon-klien/{id} (show)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_SSO}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/daftar-calon-klien/70720230110001",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"daftar-calon-klien",
+								"70720230110001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "daftar-calon-klien/dropdown",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_SSO}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/daftar-calon-klien/dropdown",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"daftar-calon-klien",
+								"dropdown"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
